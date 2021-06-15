@@ -12,7 +12,11 @@ spec_sed = spec['flux_spec'] #jansky
 phot_wav = phot['filter_lambda']
 phot_sed = phot['flux_mag']
 
-plt.title('Fix me, pleaase!')
-plt.loglog(spec_wav, spec_sed)
-plt.scatter(phot_wav, phot_sed)
+plt.title('Example SED')
+plt.loglog(spec_wav, spec_sed, color = 'purple')
+plt.scatter(phot_wav, phot_sed, marker='*', color='purple')
+plt.xlabel('Wavelength')
+plt.ylabel('Flux')
+plt.ylim(1e2, 1e15)
+plt.xlim(5e1, 2e7)
 plt.show()
